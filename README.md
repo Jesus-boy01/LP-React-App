@@ -14,7 +14,7 @@ The **Country Search App** is a simple React application that allows users to se
 
 - **React**: For building the user interface.
 - **JavaScript**: For functionality and logic.
-- **CSS (Tailwind CSS)**: For styling the application (if applicable).
+- **CSS (Tailwind CSS)**: For styling the application.
 - **REST API**: The app fetches country data from a public API.
 
 ## Getting Started
@@ -27,7 +27,7 @@ The **Country Search App** is a simple React application that allows users to se
 ### Installation
 
 1. Clone the repository:
-   `git clone https://github.com/your-username/country-search-app.git`
+   `git clone https://github.com/Jesus-boy01/LP-React-App.git`
 
 2. Navigate into the project directory:
     `cd lawpavilion-react`
