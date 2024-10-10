@@ -17,8 +17,8 @@ const SearchResults = ({ allResults, searchQuery, searchClicked }) => {
             <>
               <div key={index} className="font-thin">
                 <div className="flex items-center">
-                  <img src={item.flags.png} alt={item.name.official} className="h-3 w-auto" />
-                  <h3 className="ml-1">{item.name.official}</h3>
+                  <img src={item.flags.png} alt={item.flags.alt} className="h-3 w-auto" />
+                  <h3 className="ml-1">{item.name.common}</h3>
                 </div>
                 <p>Continent: {item.continents}</p>
               </div>
