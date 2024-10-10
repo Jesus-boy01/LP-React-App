@@ -4,8 +4,12 @@ import Button from "./Button";
 const SearchResults = ({ allResults, searchQuery, searchClicked }) => {
   const filteredResults =
     searchClicked && searchQuery.trim() !== ""
-      ? allResults.filter((item) =>
-          item.name.official.toLowerCase().includes(searchQuery.toLowerCase())
+      ? allResults.filter(
+          (item) =>
+            item.name.official
+              .toLowerCase()
+              .includes(searchQuery.toLowerCase()) ||
+            item.name.common.toLowerCase().includes(searchQuery.toLowerCase())
         )
       : [];
 
@@ -17,7 +21,11 @@ const SearchResults = ({ allResults, searchQuery, searchClicked }) => {
             <>
               <div key={index} className="font-thin">
                 <div className="flex items-center">
-                  <img src={item.flags.png} alt={item.name.official} className="h-3 w-auto" />
+                  <img
+                    src={item.flags.png}
+                    alt={item.flags.alt}
+                    className="h-3 w-auto"
+                  />
                   <h3 className="ml-1">{item.name.official}</h3>
                 </div>
                 <p>Continent: {item.continents}</p>
