@@ -10,13 +10,16 @@ const SearchResults = ({ allResults, searchQuery, searchClicked }) => {
       : [];
 
   return (
-    <div className="mt-4">
+    <div className="mt-4 sm:pl-8 px-2">
       {searchClicked && searchQuery.trim() !== "" ? (
         filteredResults.length > 0 ? (
           filteredResults.map((item, index) => (
             <>
               <div key={index} className="font-thin">
-                <h3>{item.name.official}</h3>
+                <div className="flex items-center">
+                  <img src={item.flags.png} alt={item.name.official} className="h-3 w-auto" />
+                  <h3 className="ml-1">{item.name.official}</h3>
+                </div>
                 <p>Continent: {item.continents}</p>
               </div>
               <Button title="see details..." />
